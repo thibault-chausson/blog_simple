@@ -156,6 +156,8 @@ function CheckLogin(){
         }
     }
 
+
+
     return array($loginSuccessful, $loginAttempted, $error, $userID);
 }
 

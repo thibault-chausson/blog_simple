@@ -1,6 +1,6 @@
 <?php
 
-echo 'sa';
+
 
 echo '<form action="index.php" method="POST">
             <input type="hidden" name="newPost" value="1">
