@@ -40,15 +40,17 @@ $loginStatus=CheckLogin();
 <div class="s_menu">
     <?php
     if (isset($username)){
-        echo "<p>Bienvenu $username.</p> <p> Quoi de neuf aujourd'hui ?</p>";
-    }
+
+            include ('php/ajouter_post.php');
+            include "php/ecrire.php";
+        }
     else{
         echo '<a><a href="connexion.php">Connectez-vous >></a></a>';
     }
     ?>
 </div>
 <div class="corps">
-    <p>eeee</p>
+    aaaa
 </div>
 </div>
 
