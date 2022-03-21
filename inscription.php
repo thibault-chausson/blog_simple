@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="icon" href="ressources/menu/Notepad_Pencil_clip_art_hight.png">
+</head>
+
+<body>
+
+
 <?php
 include("php/sql.php");
 ConnectDatabase();
@@ -27,3 +38,6 @@ include 'php/footer.php';
 DisconnectDatabase();
 
 ?>
+
+
+</body>

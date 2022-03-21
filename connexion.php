@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="icon" href="ressources/menu/Notepad_Pencil_clip_art_hight.png">
+
+</head>
+
+<body>
+
+
 <?php
 include("php/sql.php");
 ConnectDatabase();
@@ -28,11 +40,10 @@ if ($loginStatus[0]) {
 }
 else {
     include 'php/formulaire_connexion.php';
+    echo '<a href="inscription.php">Créer un compte >></a>';
 }
 
 ?>
-
-<a href="inscription.php">Créer un compte >></a>
 
 <?php
 
@@ -41,3 +52,5 @@ include 'php/footer.php';
 DisconnectDatabase();
 
 ?>
+
+</body>
