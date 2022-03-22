@@ -58,18 +58,6 @@ $loginStatus=CheckLogin();
     ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 <div class="corps">
     <?php
@@ -79,8 +67,15 @@ $loginStatus=CheckLogin();
         $result10 = $conn->query($query10);
         $userID=$result10->fetch_assoc()["ID"];
 
+        /*userAffiche la c'est egale à userID pour le test*/
+        $userAffiche=$userID;
+
         include "php/afficher_post.php";
-        DisplayPostsPage($userID);
+
+        DisplayPostsPage($userAffiche, $userID);
+
+
+
     ?>
 </div>
 </div>
