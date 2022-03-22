@@ -68,7 +68,7 @@ $loginStatus=CheckLogin();
         $userID=$result10->fetch_assoc()["ID"];
 
         /*userAffiche la c'est egale à userID pour le test*/
-        $userAffiche=$userID;
+        $userAffiche=$_GET["userID"];
 
         include "php/afficher_post.php";
 
