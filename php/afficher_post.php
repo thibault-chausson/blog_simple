@@ -23,8 +23,8 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
 
                 echo '
                 <div>
-                    <form action="./index.php?userID='.$userID.'" method="GET">
-                        <input type="hidden" name="postID" value="'.$row["ID_post"].'">
+                    <form action="./index.php?userID='.$userID.'" method="POST">
+                        <input type="hidden" name="modifier" value="'.$row["ID_post"].'">
                         <button type="submit">Modifier/effacer</button>
                     </form>
                 </div>';
@@ -42,7 +42,7 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
             <p class="postContent">' . $row["content"] . '</p>
             
             ';
-            include "php/modification_post.php";
+
         }
     } else {
         echo '

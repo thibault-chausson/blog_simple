@@ -1,13 +1,17 @@
+
 <?php
 
-if ( isset($_GET["postID"]) ){
-
-$query = 'SELECT * FROM `post` WHERE `ID_post` ='.$_GET["postID"];
-$result = $conn->query($query);
-
-
+if ( isset($_POST["modifier"]) ){
     ConnectDatabase();
     $loginStatus=CheckLogin();
+
+    $query = 'SELECT * FROM `post` WHERE `ID_post` ='.$_POST["modifier"];
+    $result = $conn->query($query);
+
+
+
+
+
     $query40 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
 
     $result40 = $conn->query($query40);
@@ -19,17 +23,18 @@ if ( $result->num_rows > 0 ){
     $data = $result->fetch_assoc();
 
 
+
     echo '<form action="./index.php?userID='.$userID.'" method="POST">
         <div class="formbutton">Modification d\'un post passé</div>
         <div>
             <input type="hidden" name="action" value="edit">
-            <input type="hidden" name="postID" value="$data["ID_post"]">
+            <input type="hidden" name="postID" value='.$data["ID_post"].'>
             <label for="title">Titre :</label>
-            <input autofocus type="text" name="title" value="$data["title"]">
+            <input autofocus type="text" name="title" value='.$data["title"].'>
         </div>
         <div>
             <label for="content">Message :</label>
-            <textarea name="content"> $data["content"]</textarea>
+            <textarea name="content"> '.$data["content"].'</textarea>
         </div>
         <div class="formbutton">
             <button type="submit">Modifier le post</button>
@@ -39,7 +44,7 @@ if ( $result->num_rows > 0 ){
         <div class="formbutton">Cliquez le bouton ci-dessous pour effacer le post</div>
         <div>
             <input type="hidden" name="action" value="delete">
-            <input type="hidden" name="postID" value="$data["ID_post"]">
+            <input type="hidden" name="postID" value='.$data["ID_post"].'>
         </div>
         <div class="formbutton">
             <button type="submit">Supprimer le post</button>

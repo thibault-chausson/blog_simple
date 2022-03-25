@@ -73,7 +73,17 @@ $loginStatus=CheckLogin();
 
         include "php/afficher_post.php";
 
+
+    if (!isset($_POST["modifier"])) {
         DisplayPostsPage($userAffiche, $userID);
+    }
+
+        if (isset($_POST["modifier"])){
+            include "php/modification_post.php";
+            include "php/mettre_post_BDD.php";
+        }
+
+
 
 
 
