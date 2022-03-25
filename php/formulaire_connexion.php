@@ -8,7 +8,7 @@
         <label for="password">Password :</label>
         <input type="password" id="password" name="password">
 
-        <input type="checkbox" onclick="Afficher_password()"> Afficher le mot de passe
+        <input type="checkbox" onclick="Afficher_password('password')"> Afficher le mot de passe
     </div>
     <div>
         <button type="submit">Se Connecter</button>
@@ -16,20 +16,6 @@
 </form>
 
 
-<script>
-    function Afficher_password()
-    {
-        var input = document.getElementById("password");
-        if (input.type === "password")
-        {
-            input.type = "text";
-        }
-        else
-        {
-            input.type = "password";
-        }
-    }
-</script>
-
+<script type="text/javascript" src="./js/password.js"></script>
 
 
