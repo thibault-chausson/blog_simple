@@ -93,10 +93,16 @@ $loginStatus=CheckLogin();
     ";
 
         $result60 = $conn->query($query60);
-        $row60 = $result60->fetch_assoc()[ID];
+        $row60 = $result60->fetch_assoc();
+
+
+
+
+
+        echo '<h2>Découvrez le blog de : '.$row60[logname].'</h2>';
 
         include "php/afficher_post.php";
-        DisplayPostsPage($row60,-1);
+        DisplayPostsPage($row60[ID],-1);
     }
 
 
