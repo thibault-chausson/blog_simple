@@ -12,7 +12,7 @@
         echo '<nav>
                 <ul>
                     <li><a href="./index.php?userID='.$userID.'" class="menu">Rock Note</a></li>
-                    <li><a href="connexion.php" class="menu">Connexion</a></li>
+                    <li><a href="connexion.php" class="menu">Déconexion</a></li>
                 </ul>
               </nav>';
     }
@@ -24,6 +24,8 @@
               </ul>
             </nav>';
     }
+
+    DisconnectDatabase();
 
 ?>
 

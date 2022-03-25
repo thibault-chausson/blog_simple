@@ -26,7 +26,7 @@ if ($loginStatus[1]) {
 }
 
 if ($loginStatus[0]) {
-    echo '<p>Connexion OK !</p>';
+
     echo '<form action="./connexion.php" method="POST">
         <div>
             <input type="hidden" value="logout" name="logout"></input>
