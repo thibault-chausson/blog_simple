@@ -14,9 +14,16 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
 
             if ($blogIDAffiche==$userPropri){
 
+                ConnectDatabase();
+                $loginStatus=CheckLogin();
+                $query50 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
+
+                $result50 = $conn->query($query50);
+                $userID = $result50->fetch_assoc()["ID"];
+
                 echo '
                 <div>
-                    <form action="index.php" method="GET">
+                    <form action="./index.php?userID='.$userID.'" method="GET">
                         <input type="hidden" name="postID" value="'.$row["ID_post"].'">
                         <button type="submit">Modifier/effacer</button>
                     </form>
