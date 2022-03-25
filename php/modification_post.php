@@ -5,6 +5,16 @@ if ( isset($_GET["postID"]) ){
 $query = 'SELECT * FROM `post` WHERE `ID_post` ='.$_GET["postID"];
 $result = $conn->query($query);
 
+
+    ConnectDatabase();
+    $loginStatus=CheckLogin();
+    $query40 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
+
+    $result40 = $conn->query($query40);
+    $userID = $result40->fetch_assoc()["ID"];
+
+
+
 if ( $result->num_rows > 0 ){
     $data = $result->fetch_assoc();
     ?>

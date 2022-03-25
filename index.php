@@ -11,8 +11,9 @@
 <body>
 
 <?php
-include 'php/menu.php';
 include 'php/sql.php';
+include 'php/menu.php';
+
 
 ConnectDatabase();
 
