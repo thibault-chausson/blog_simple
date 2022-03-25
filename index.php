@@ -63,25 +63,46 @@ $loginStatus=CheckLogin();
 <div class="corps">
     <?php
     /*Pour avoir le userID*/
-        $query10 = "SELECT `ID` FROM `connexion` WHERE logname = '".$username."' ";
+    if (isset($username)) {
+
+        $query10 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
 
         $result10 = $conn->query($query10);
-        $userID=$result10->fetch_assoc()["ID"];
+        $userID = $result10->fetch_assoc()["ID"];
 
         /*userAffiche la c'est egale à userID pour le test*/
-        $userAffiche=$_GET["userID"];
+        $userAffiche = $_GET["userID"];
 
         include "php/afficher_post.php";
 
-
-    if (!isset($_POST["modifier"])) {
-        DisplayPostsPage($userAffiche, $userID);
-    }
+        if (!isset($_POST["modifier"])) {
+            DisplayPostsPage($userAffiche, $userID);
+        }
 
         if (isset($_POST["modifier"])){
             include "php/modification_post.php";
             include "php/mettre_post_BDD.php";
         }
+    }
+
+    else{
+        $query60 =
+            "SELECT `ID`,`logname` FROM `connexion`
+    ORDER BY RAND()
+    LIMIT 1
+    ";
+
+        $result60 = $conn->query($query60);
+        $row60 = $result60->fetch_assoc()[ID];
+
+        include "php/afficher_post.php";
+        DisplayPostsPage($row60,-1);
+    }
+
+
+
+
+
 
 
 

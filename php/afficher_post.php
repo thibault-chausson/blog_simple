@@ -1,8 +1,11 @@
 <?php
 
+
 function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
 {
     global $conn;
+
+
 
     $query = "SELECT * FROM `post` WHERE `owner_login` = " . $blogIDAffiche . " ORDER BY `date_lastedit` DESC LIMIT 10";
     $result = $conn->query($query);
