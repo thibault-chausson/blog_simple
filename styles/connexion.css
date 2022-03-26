@@ -1,0 +1,37 @@
+.bouton_co{
+    background-color:#EEEEEE;
+    padding:5px;
+    border-radius: 15px;
+}
+
+
+
+.bouton_co:hover{
+    background-color: coral;
+}
+
+label {
+    font-family:verdana;
+    color:white;
+    font-weight:bold;
+    display:inline-block;
+    width:100px;
+    text-align: right;
+    padding:5px 20px;
+    background-color:Midnightblue;
+    border-radius:25px;
+}
+
+
+input {
+    font: 1em sans-serif;
+    width : 40%;
+    box-sizing:border-box;
+    border: 1px solid #999999;
+    margin-left:40px;
+}
+
+
+
+
+

@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="styles/boutons.css">
+
+</head>
+
+<body>
+
+
+
+
 <?php
 
 
@@ -41,13 +55,12 @@ if( isset($_POST["action"]) ){
 
 <form action="./recherche.php" method="Post">
 
-    <div>
-        <input type="hidden" name="action" value="recherche">
-        <label for="title">Recherche :</label>
-        <input autofocus type="text" name="re">
+    <div class="champ">
+        <input type="hidden" name="action" value="recherche" >
+        <input autofocus type="text" name="re"  >
     </div>
-    <div>
-        <button type="submit">Rechercher</button>
+    <div >
+        <button type="submit" class="bouton" >Rechercher</button>
     </div>
 </form>
 
@@ -57,3 +70,5 @@ if( isset($_POST["action"]) ){
 
 
 ?>
+
+</body>

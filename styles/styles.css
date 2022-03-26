@@ -5,3 +5,8 @@ body{
 .centre{
     text-align: center;
 }
+
+.liste{
+    list-style:none;
+
+}

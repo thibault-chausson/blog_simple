@@ -1,0 +1,74 @@
+@media screen and (min-width: 890px) {
+
+
+    .bouton {
+        position: absolute;
+
+
+        margin-left: 170px;
+        margin-top: 4px;
+
+    }
+
+    .champ {
+        position: absolute;
+
+        margin: 2px;
+    }
+    input, textarea {
+
+        margin-left:40px;
+    }
+}
+
+
+@media screen and (max-width: 889px) {
+    .champ{
+        text-align: center;
+    }
+    .bouton{
+        text-align: center;
+    }
+}
+
+.ecrire{
+    text-align: center;
+
+}
+
+.nom{
+    position: absolute;
+    left: 20%;
+}
+
+
+input, textarea {
+    font: 1em sans-serif;
+    width : 50%;
+    box-sizing:border-box;
+    border: 1px solid #999999;
+
+}
+
+.bouton{
+    background-color:#EEEEEE;
+    padding:5px;
+    border-radius: 15px;
+}
+
+.bouton2{
+    background-color:#EEEEEE;
+    padding:5px;
+    border-radius: 15px;
+}
+
+
+
+.bouton:hover{
+    background-color: coral;
+}
+
+
+.bouton2:hover{
+    background-color: coral;
+}

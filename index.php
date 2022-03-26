@@ -53,7 +53,7 @@ $loginStatus=CheckLogin();
         include "php/mettre_post_BDD.php";
     }
     else{
-        echo '<a><a href="connexion.php">Connectez-vous >></a></a>';
+        echo '<div class="centre"><a href="connexion.php">Connectez-vous >></a></div>';
     }
 
 

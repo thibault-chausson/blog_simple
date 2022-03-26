@@ -1,0 +1,68 @@
+.blogPost{
+    margin : 20px auto;
+    width:90%;
+    border: 4px double midnightblue;
+    border-radius:25px;
+}
+
+.postContent {
+    margin : 10px auto;
+    width:85%;
+}
+
+.postTitle{
+    background-color:gray;
+    border-radius: 22px 22px 0px 0px;
+    overflow: auto;
+    padding-left: 30px;
+}
+
+
+.postTitle h3 {
+    background-color: gray;
+    text-align: left;
+    font-size:1.5em;
+}
+
+.postTitle p {
+    margin: 0px 0px 10px 70px;
+    padding:0;
+    color:lightblue;
+    font-style: italic;
+}
+
+.postModify {
+    float:right;
+}
+
+.postModify form{
+    float:right;
+    margin:0px 30px 0 0;
+    padding:0px;
+    border:0;
+}
+
+.postModify form button{
+    margin:25px 0px 0px 0px;
+}
+
+.postAuthor {
+    float: right;
+    color: black;;
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align:right;
+    margin: 30px 10px 0px 0px;
+}
+
+
+
+.modifbutton{
+    background-color:#EEEEEE;
+    padding:5px;
+    border-radius: 15px;
+}
+
+.modifbutton:hover{
+    background-color: coral;
+}

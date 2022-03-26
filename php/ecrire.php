@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="styles/boutons.css">
+<link rel="stylesheet" href="styles/style.css">
+
 <?php
 if ( isset($_POST["newPost"]) && $_POST["newPost"] == 1 ){
 
@@ -11,19 +14,20 @@ if ( isset($_POST["newPost"]) && $_POST["newPost"] == 1 ){
 
 
 
-echo '<form action="./index.php?userID='.$userID.'" method="POST">
-    <div >Création d\'un nouveau post</div>
+echo '<form action="./index.php?userID='.$userID.'" method="POST" >
+    <p class="centre">Exprimez vous !</p>
+    </br>
     <div>
         <input type="hidden" name="action" value="new">
-        <label for="title">Titre :</label>
-        <input autofocus type="text" name="title">
+        <div class="nom"><label for="title">Titre :</label></div>
+        <div class="ecrire"> <input autofocus type="text" name="title"></div>
     </div>
     <div>
-        <label for="content">Message :</label>
-        <textarea name="content">Tapez votre texte ici...</textarea>
+        <div class="nom"><label for="content">Message :</label></div>
+        <div class="ecrire"><textarea name="content">Tapez votre texte ici...</textarea></div>
     </div>
     <div>
-        <button type="submit">Ajouter ce post à mon blog</button>
+        <div class="centre"><button type="submit" class="bouton2">Ajouter ce post à mon blog</button></div>
     </div>
 </form>';
 

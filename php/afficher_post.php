@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="styles/post.css">
+
 <?php
 
 
@@ -15,6 +17,9 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
 
             $timestamp = strtotime($row["date_lastedit"]);
 
+            echo '<div class="blogPost">
+                    <div class="postTitle">';
+
             if ($blogIDAffiche==$userPropri){
 
                 ConnectDatabase();
@@ -24,26 +29,39 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
                 $result50 = $conn->query($query50);
                 $userID = $result50->fetch_assoc()["ID"];
 
+
+
                 echo '
-                <div>
+                
+                <div class="postModify">
                     <form action="./index.php?userID='.$userID.'" method="POST">
                         <input type="hidden" name="modifier" value="'.$row["ID_post"].'">
-                        <button type="submit">Modifier/effacer</button>
+                        <button class="modifbutton" type="submit">Modifier/effacer</button>
                     </form>
                 </div>';
+            }
+            else{
+                $avoir_mon = "SELECT logname FROM `connexion` WHERE `ID` = " . $blogIDAffiche . "";
+                $resultat_nom = $conn->query($avoir_mon);
+                $nom = $resultat_nom->fetch_assoc()[logname];
+                echo '
+                <div class="postAuthor">par '.$nom.'</div>
+                ';
             }
 
 
             echo '
-                <h3>•' . $row["title"] . '</h3>
-                <p>dernière modification le ' . date("d/m/y à h:i:s", $timestamp) . '
+                
+                <h3>' . $row["title"] . '</h3>
+                <p>dernière modification le ' . date("d/m/y à h:i:s", $timestamp) . '</p>
+                </div>
             
             ';
 
 
             echo '
             <p class="postContent">' . $row["content"] . '</p>
-            
+            </div>
             ';
 
         }
