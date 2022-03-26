@@ -41,7 +41,11 @@ if ($loginStatus[0]) {
 }
 else {
     include 'php/formulaire_connexion.php';
-    echo '<a href="inscription.php">Créer un compte >></a>';
+    echo '
+            </br>
+            <div class="centre">
+            <a  href="inscription.php">Créer un compte >></a>
+            </div>';
 }
 
 ?>

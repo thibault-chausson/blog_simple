@@ -23,12 +23,16 @@ label {
 }
 
 
-input {
+form input {
     font: 1em sans-serif;
     width : 40%;
     box-sizing:border-box;
     border: 1px solid #999999;
     margin-left:40px;
+}
+
+.p {
+    text-align: center;
 }
 
 

@@ -18,7 +18,9 @@
     </div>
 </form>
 
-<input  type="checkbox" onclick="Afficher_password('password')"> Afficher le mot de passe
+<br>
+
+<div class="p"><input  type="checkbox" onclick="Afficher_password('password')"> Afficher le mot de passe</div>
 
 
 <script type="text/javascript" src="./js/password.js"></script>
