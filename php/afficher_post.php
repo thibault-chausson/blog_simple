@@ -49,7 +49,7 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
         }
     } else {
         echo '
-        <p>Il n\'y a pas de post dans ce blog.</p>';
+        <p>Il n\'y a pas de post à afficher.</p>';
 
 
     }

@@ -29,11 +29,11 @@ $loginStatus=CheckLogin();
 
         if (isset($username)){
 
-            echo "<p>Bienvenu $username.</p> <p> Quoi de neuf aujourd'hui ?</p>";
+            echo "<h1>Bienvenu $username.</h1> <h2> Quoi de neuf aujourd'hui ?</h2>";
 
         }
         else{
-            echo '<p>Vous n\'êtes pas connecté il me semble !!</p>';
+            echo '<h1>Bienvenu sur Rock Note</h1>';
         }
     ?>
 </div>
@@ -56,6 +56,9 @@ $loginStatus=CheckLogin();
         echo '<a><a href="connexion.php">Connectez-vous >></a></a>';
     }
 
+    include "recherche.php";
+    echo $message_recherche;
+
     ?>
 
 
@@ -65,13 +68,30 @@ $loginStatus=CheckLogin();
     /*Pour avoir le userID*/
     if (isset($username)) {
 
-        $query10 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
+        $query10 = "SELECT `ID`  FROM `connexion` WHERE logname = '" . $username . "' ";
 
         $result10 = $conn->query($query10);
         $userID = $result10->fetch_assoc()["ID"];
 
         /*userAffiche la c'est egale à userID pour le test*/
         $userAffiche = $_GET["userID"];
+
+
+
+
+
+        if ($userAffiche!="") {
+
+            $demande_nom = "SELECT `logname`  FROM `connexion` WHERE ID = '" . $userAffiche . "' ";
+
+            $reponse_demande_nom = $conn->query($demande_nom);
+            $userAfficheNom = $reponse_demande_nom->fetch_assoc()["logname"];
+
+            echo "<h3>Vous regarder le bog de $userAfficheNom.</h3>";
+        }
+        else{
+            echo "<h3>Cette utilisateur est inexistant donc :</h3>";
+        }
 
         include "php/afficher_post.php";
 

@@ -1,4 +1,4 @@
-<form action="./index.php" method="post">
+<form action="./connexion.php" method="post">
 
     <div>
         <label for="name">Login :</label>
