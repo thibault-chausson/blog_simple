@@ -56,8 +56,7 @@ $loginStatus=CheckLogin();
         echo '<a><a href="connexion.php">Connectez-vous >></a></a>';
     }
 
-    include "recherche.php";
-    echo $message_recherche;
+
 
     ?>
 
@@ -125,18 +124,19 @@ $loginStatus=CheckLogin();
         DisplayPostsPage($row60[ID],-1);
     }
 
-
-
-
-
-
-
-
-
-
-
     ?>
+
+
+
 </div>
+
+    <div class="recherche">
+        <?php
+            include "recherche.php";
+            echo $message_recherche;
+        ?>
+    </div>
+
 </div>
 
 

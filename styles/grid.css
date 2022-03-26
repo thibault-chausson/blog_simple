@@ -14,10 +14,15 @@
     background-color: gold;
 }
 .s_menu {
-    grid-area: 2 / 2 / 3 / 8;
+    grid-area: 2 / 2 / 3 / 5;
     background-color: aqua;
 }
 .corps {
     grid-area: 3 / 2 / 11 / 8;
     background-color: burlywood;
+}
+
+.recherche {
+    grid-area: 2 / 5 / 3 / 8;
+    background-color: coral;
 }
