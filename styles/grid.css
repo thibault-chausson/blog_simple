@@ -14,7 +14,7 @@
     background-color: gold;
 }
 .s_menu {
-    grid-area: 2 / 2 / 3 / 5;
+    grid-area: 2 / 2 / 3 / 6;
     background-color: aqua;
 }
 .corps {
@@ -23,6 +23,6 @@
 }
 
 .recherche {
-    grid-area: 2 / 5 / 3 / 8;
+    grid-area: 2 / 6 / 3 / 8;
     background-color: coral;
 }

@@ -29,11 +29,11 @@ $loginStatus=CheckLogin();
 
         if (isset($username)){
 
-            echo "<h1>Bienvenu $username.</h1> <h2> Quoi de neuf aujourd'hui ?</h2>";
+            echo "<h1 class='centre'>Bienvenu $username.</h1> <h2 class='centre'> Quoi de neuf aujourd'hui ?</h2>";
 
         }
         else{
-            echo '<h1>Bienvenu sur Rock Note</h1>';
+            echo '<h1 class="centre">Bienvenu sur Rock Note</h1>';
         }
     ?>
 </div>
@@ -63,9 +63,10 @@ $loginStatus=CheckLogin();
 
 </div>
 <div class="corps">
+
     <?php
     /*Pour avoir le userID*/
-    if (isset($username)) {
+    if (isset($username) ) {
 
         $query10 = "SELECT `ID`  FROM `connexion` WHERE logname = '" . $username . "' ";
 
@@ -86,10 +87,10 @@ $loginStatus=CheckLogin();
             $reponse_demande_nom = $conn->query($demande_nom);
             $userAfficheNom = $reponse_demande_nom->fetch_assoc()["logname"];
 
-            echo "<h3>Vous regarder le bog de $userAfficheNom.</h3>";
+            echo "<h3 class='centre'>Vous regarder le bog de $userAfficheNom.</h3>";
         }
         else{
-            echo "<h3>Cette utilisateur est inexistant donc :</h3>";
+            echo "<h3 class='centre'>Cette utilisateur est inexistant donc :</h3>";
         }
 
         include "php/afficher_post.php";
@@ -105,23 +106,23 @@ $loginStatus=CheckLogin();
     }
 
     else{
-        $query60 =
-            "SELECT `ID`,`logname` FROM `connexion`
-    ORDER BY RAND()
-    LIMIT 1
-    ";
 
-        $result60 = $conn->query($query60);
-        $row60 = $result60->fetch_assoc();
+        $userAffiche = $_GET["userID"];
+        if ($userAffiche!="") {
+            $demande_nom = "SELECT `logname`  FROM `connexion` WHERE ID = '" . $userAffiche . "' ";
 
-
+            $reponse_demande_nom = $conn->query($demande_nom);
+            $userAfficheNom = $reponse_demande_nom->fetch_assoc()["logname"];
+            echo "<h3 class='centre'>Vous regarder le bog de $userAfficheNom.</h3>";
 
 
+            include "php/afficher_post.php";
+            DisplayPostsPage($_GET["userID"], -1);
+        }
+        else{
+            echo '<h3 class="centre">Recherchez vos amis !!</h3>';
+        }
 
-        echo '<h2>Découvrez le blog de : '.$row60[logname].'</h2>';
-
-        include "php/afficher_post.php";
-        DisplayPostsPage($row60[ID],-1);
     }
 
     ?>
@@ -131,9 +132,12 @@ $loginStatus=CheckLogin();
 </div>
 
     <div class="recherche">
+
         <?php
+        //if (isset($username) ) {
             include "recherche.php";
             echo $message_recherche;
+        //}
         ?>
     </div>
 
