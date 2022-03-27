@@ -22,9 +22,14 @@ $loginStatus=CheckLogin();
 
 ?>
 
-<div class="parent">
-<div class="titre">
-    <?php
+
+
+
+<div class="parenttitre">
+
+
+    <div class="titre">
+        <?php
 
 
         if (isset($username)){
@@ -35,33 +40,67 @@ $loginStatus=CheckLogin();
         else{
             echo '<h1 class="centre">Bienvenu sur Rock Note</h1>';
         }
-    ?>
+        ?>
+    </div>
+
+
+
+
+
+    <div class="s_menu">
+        <?php
+        if (isset($username)){
+            if ( ! isset($_POST["newPost"]) && $_POST["newPost"] != 1 ) {
+                include('php/ajouter_post.php');
+            }
+            include "php/ecrire.php";
+            include "php/mettre_post_BDD.php";
+        }
+        else{
+            echo '<div class="centre"><a href="connexion.php">Connectez-vous >></a></div>';
+        }
+
+
+
+        ?>
+
+
+    </div>
+
+
+
+
+
+    <div class="recherche">
+
+        <?php
+        //if (isset($username) ) {
+        include "recherche.php";
+        echo $message_recherche;
+        //}
+        ?>
+    </div>
+
 </div>
+
+
+
+
+
+
+
+<div class="parentcorps">
+
 <div class="m_user">
     <p>Visitez d'autres pages Rock Note : </p>
     <?php
         include ("php/sql_affichage_user.php");
     ?>
 </div>
-<div class="s_menu">
-    <?php
-    if (isset($username)){
-        if ( ! isset($_POST["newPost"]) && $_POST["newPost"] != 1 ) {
-            include('php/ajouter_post.php');
-        }
-        include "php/ecrire.php";
-        include "php/mettre_post_BDD.php";
-    }
-    else{
-        echo '<div class="centre"><a href="connexion.php">Connectez-vous >></a></div>';
-    }
 
 
 
-    ?>
 
-
-</div>
 <div class="corps">
 
     <?php
@@ -131,17 +170,11 @@ $loginStatus=CheckLogin();
 
 </div>
 
-    <div class="recherche">
 
-        <?php
-        //if (isset($username) ) {
-            include "recherche.php";
-            echo $message_recherche;
-        //}
-        ?>
-    </div>
 
 </div>
+
+
 
 
 
