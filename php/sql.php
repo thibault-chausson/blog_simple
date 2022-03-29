@@ -65,7 +65,6 @@ function CheckNewAccountForm(){
 
 
                 $query = "INSERT INTO `connexion` VALUES (NULL, '$username', '$password' )";
-                echo $query . "<br>";
                 $result = $conn->query($query);
 
                 if (mysqli_affected_rows($conn) == 0) {

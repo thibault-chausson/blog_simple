@@ -24,10 +24,14 @@ include 'php/menu.php';
 
 
 if($newAccountStatus[1]){
-    echo '<h3 class="successMessage">Nouveau compte crée avec succès!</h3>';
+    echo '<h3 class="centre">Nouveau compte crée avec succès !</h3>';
+
+
+
+
 }
 elseif ($newAccountStatus[0]){
-    echo '<h3 class="errorMessage">'.$newAccountStatus[2].'</h3>';
+    echo '<h3 id="colorAnim" class="centre">'.$newAccountStatus[2].'</h3>';
 }
 
 
@@ -44,3 +48,6 @@ DisconnectDatabase();
 
 
 </body>
+
+<script type="text/javascript" src="./js/messageErreur.js"></script>
+
