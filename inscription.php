@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
+    <link rel="stylesheet" href="styles/inscription.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
     <link rel="icon" href="ressources/menu/Notepad_Pencil_clip_art_hight.png">
 </head>
 

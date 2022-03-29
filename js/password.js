@@ -1,4 +1,4 @@
-function Afficher_password(nom)
+function afficherPassword(nom)
 {
     var input = document.getElementById(nom);
     if (input.type === "password")

@@ -23,7 +23,7 @@ include 'php/menu.php';
 
 
 if ($loginStatus[1]) {
-    echo '<h3 class="errorMessage">' . $loginStatus[2] . '</h3>';
+    echo '<h3 id="colorAnim" class="centre">' . $loginStatus[2] . '</h3>';
 }
 
 if ($loginStatus[0]) {
@@ -59,3 +59,7 @@ DisconnectDatabase();
 ?>
 
 </body>
+
+
+
+<script type="text/javascript" src="./js/messageErreur.js"></script>

@@ -34,7 +34,7 @@ $loginStatus=CheckLogin();
 
         if (isset($username)){
 
-            echo "<h1 class='centre'>Bienvenu $username.</h1> <h2 class='centre'> Quoi de neuf aujourd'hui ?</h2>";
+            echo "<h1 class='centre'>Bienvenue $username.</h1> <h2 class='centre'> Quoi de neuf aujourd'hui ?</h2>";
 
         }
         else{

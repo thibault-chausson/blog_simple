@@ -1,6 +1,9 @@
-<form action="./inscription.php" method="post">
 
-    <div>Créer vous un compte</div>
+
+
+<form action="./inscription.php" method="post" class="centre">
+
+
     <div>
         <label for="name">Nouveau Login :</label>
         <input autofocus type="text" id="name" name="name">
@@ -8,18 +11,28 @@
     <div>
         <label for="password">Définir Password :</label>
         <input type="password" id="password" name="password">
-        <input type="checkbox" onclick="Afficher_password('password')"> Afficher le mot de passe
 
     </div>
     <div>
         <label for="confirm">Confirmer Password :</label>
         <input type="password" id="confirm" name="confirm">
-        <input type="checkbox" onclick="Afficher_password('confirm')"> Afficher le mot de passe
-    </div>
+        </div>
     <div>
-        <button type="submit">Créer le compte</button>
+        <button type="submit" class="bouton_co">Créer le compte</button>
     </div>
+
 </form>
+
+
+<div class="pass">
+    <input type="checkbox" onclick="afficherPassword('password')" > Afficher le mot de passe
+</div>
+
+<div class="conf">
+    <input type="checkbox" onclick="afficherPassword('confirm')" > Afficher le mot de passe
+</div>
+
+
 
 
 

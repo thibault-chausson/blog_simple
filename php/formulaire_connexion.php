@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="styles/connexion.css">
-<link rel="stylesheet" href="styles/styles.css">
+
 
 
 <form action="./connexion.php" method="post">
@@ -20,9 +19,14 @@
 
 <br>
 
-<div class="p"><input  type="checkbox" onclick="Afficher_password('password')"> Afficher le mot de passe</div>
+<div class="p"><input  type="checkbox" onclick="afficherPassword('password')"> Afficher le mot de passe</div>
+
+
+
 
 
 <script type="text/javascript" src="./js/password.js"></script>
+
+
 
 
