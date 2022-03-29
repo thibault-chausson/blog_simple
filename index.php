@@ -92,7 +92,7 @@ $loginStatus=CheckLogin();
 <div class="parentcorps">
 
 <div class="m_user">
-    <p>Visitez d'autres pages Rock Note : </p>
+    <h3>Visitez d'autres pages Rock Note : </h3>
     <?php
         include ("php/sql_affichage_user.php");
     ?>

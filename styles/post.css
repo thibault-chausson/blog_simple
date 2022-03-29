@@ -1,7 +1,7 @@
 .blogPost{
     margin : 20px auto;
     width:90%;
-    border: 4px double midnightblue;
+    border: 4px double black;
     border-radius:25px;
 }
 
@@ -27,7 +27,7 @@
 .postTitle p {
     margin: 0px 0px 10px 70px;
     padding:0;
-    color:lightblue;
+    color:white;
     font-style: italic;
 }
 
@@ -64,5 +64,5 @@
 }
 
 .modifbutton:hover{
-    background-color: coral;
+    background-color: gold;
 }

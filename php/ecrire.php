@@ -15,7 +15,7 @@ if ( isset($_POST["newPost"]) && $_POST["newPost"] == 1 ){
 
 
 echo '<form action="./index.php?userID='.$userID.'" method="POST" >
-    <p class="centre">Exprimez vous !</p>
+    <h3 class="centre">Exprimez vous !</h3>
     </br>
     <div>
         <input type="hidden" name="action" value="new">

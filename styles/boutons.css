@@ -5,15 +5,17 @@
         position: absolute;
 
 
-        margin-left: 170px;
+        right: 10%;
         margin-top: 4px;
+
 
     }
 
     .champ {
         position: absolute;
 
-        margin: 2px;
+        right: 15%;
+
     }
     input, textarea {
 
@@ -27,7 +29,8 @@
         text-align: center;
     }
     .bouton{
-        text-align: center;
+        right: 15%;
+        position: absolute;
     }
 }
 
@@ -65,11 +68,11 @@ input, textarea {
 
 
 .bouton:hover{
-    background-color: coral;
+    background-color: gold;
 }
 
 
 .bouton2:hover{
-    background-color: coral;
+    background-color: gold;
 }
 
