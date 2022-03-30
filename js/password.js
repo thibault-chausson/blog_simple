@@ -10,3 +10,4 @@ function afficherPassword(nom)
         input.type = "password";
     }
 }
+

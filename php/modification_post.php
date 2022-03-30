@@ -40,16 +40,26 @@ if ( $result->num_rows > 0 ){
             <button type="submit">Modifier le post</button>
         </div>
     </form>
-    <form action="./index.php?userID='.$userID.'" method="POST">
+    <form action="./index.php?userID='.$userID.'" method="POST" >
         <div class="formbutton">Cliquez le bouton ci-dessous pour effacer le post</div>
         <div>
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" id="action"  value="delete" >
             <input type="hidden" name="postID" value='.$data["ID_post"].'>
         </div>
         <div class="formbutton">
-            <button type="submit">Supprimer le post</button>
+            
+           
+            <button  type="submit"  >Supprimer le post</button>
         </div>
-    </form>';
+        
+    </form>
+    ';
+
+
+
+
+
+
 
 
 }
