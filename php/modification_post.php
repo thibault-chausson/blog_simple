@@ -22,30 +22,30 @@ if ( isset($_POST["modifier"]) ){
 if ( $result->num_rows > 0 ){
     $data = $result->fetch_assoc();
 
+?>
 
-
-    echo '<form action="./index.php?userID='.$userID.'" method="POST" class="centre">
-        <div class="formbutton">Modification d\'un post passé</div>
+<form action="./index.php?userID=<?php echo $userID?>" method="POST" class="centre" >
+        <div class="formbutton">Modification d'un post passé</div>
         <div>
             <input type="hidden" name="action" value="edit">
-            <input type="hidden" name="postID" value='.$data["ID_post"].'>
+            <input type="hidden" name="postID" value="<?php echo $data["ID_post"]?>">
             <label class="nomModif" for="title">Titre :</label>
-            <input class="ecrireModif" autofocus type="text" name="title" value='.$data["title"].'>
+            <input class="ecrireModif" autofocus type="text" name="title" value="<?php echo $data["title"]?>">
         </div>
         <div>
             <label class="nomModif" for="content">Message :</label>
-            <textarea class="ecrireModif" name="content"> '.$data["content"].'</textarea>
+            <textarea class="ecrireModif" name="content"> <?php echo $data["content"]?></textarea>
         </div>
         <div class="formbutton">
             <button type="submit" class="bouton2">Modifier le post</button>
         </div>
     </form>
     <br>
-    <form action="./index.php?userID='.$userID.'" method="POST" class="centre">
+    <form action="./index.php?userID=<?php echo $userID?>" method="POST" class="centre" onsubmit="return confirm('Suppression ?');" >
         <div class="formbutton">Cliquez le bouton ci-dessous pour effacer le post</div>
         <div>
             <input type="hidden" name="action" id="action"  value="delete" >
-            <input type="hidden" name="postID" value='.$data["ID_post"].'>
+            <input type="hidden" name="postID" value="<?php echo $data["ID_post"]?>">
         </div>
         <div class="formbutton">
             
@@ -54,9 +54,9 @@ if ( $result->num_rows > 0 ){
         </div>
         
     </form>
-    ';
 
 
+<?php
 
 
 
