@@ -47,8 +47,8 @@ function CheckNewAccountForm(){
         if ( strlen($_POST["name"]) < 4 ){
             $error = "Un nom utilisateur doit avoir une longueur d'au moins 4 lettres";
         }
-        elseif ( $_POST["password"] != $_POST["confirm"] ){
-            $error = "Le mot de passe et sa confirmation sont différents";
+        elseif ( $_POST["password"] != $_POST["confirm"] || strlen($_POST["password"]) ==0  ){
+            $error = "Le mot de passe et sa confirmation sont différents, ou votre mot de passe est vide";
         }
         else {
             $username = SecurizeString_ForSQL($_POST["name"]);

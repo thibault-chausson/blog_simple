@@ -18,6 +18,33 @@ ConnectDatabase();
 $newAccountStatus = CheckNewAccountForm();
 
 
+
+$loginStatus = CheckLogin();
+
+
+if (isset($username) && strlen($_POST["name"]) > 3 && $_POST["password"] == $_POST["confirm"] && strlen($_POST["password"]) !=0  ) {
+
+    $query20 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
+
+    $result20 = $conn->query($query20);
+
+
+
+
+
+    $userID2 = $result20->fetch_assoc()["ID"];
+
+
+    echo '<script type="text/javascript">document.location.replace("./index.php?userID='.$userID2.'");</script>';
+
+
+
+}
+
+
+
+
+
 include 'php/menu.php';
 
 

@@ -17,25 +17,6 @@ ConnectDatabase();
 $loginStatus = CheckLogin();
 
 
-if (isset($username)) {
-
-    $query20 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";
-
-    $result20 = $conn->query($query20);
-
-
-
-
-
-    $userID2 = $result20->fetch_assoc()["ID"];
-
-
-    echo '<script type="text/javascript">document.location.replace("./index.php?userID='.$userID2.'");</script>';
-
-
-
-}
-
 
 
 ?>
@@ -44,10 +25,6 @@ if (isset($username)) {
 <?php
 include 'php/menu.php';
 
-
-if ($loginStatus[1]) {
-    echo '<h3 id="colorAnim" class="centre">' . $loginStatus[2] . '</h3>';
-}
 
 if ($loginStatus[0]) {
 
@@ -60,23 +37,11 @@ if ($loginStatus[0]) {
 
 
 
-
-
-
-
-
     if (isset($_POST["logout"])){
         DestroyLoginCookie();
     }
 }
-else {
-    include 'php/formulaire_connexion.php';
-    echo '
-            </br>
-            <div class="centre">
-            <a  href="inscription.php">Créer un compte >></a>
-            </div>';
-}
+
 
 ?>
 
