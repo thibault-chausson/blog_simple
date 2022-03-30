@@ -45,6 +45,18 @@
 }
 
 
+.ecrireModif{
+    text-align: center;
+
+}
+
+.nomModif{
+    position: absolute;
+    left: 20%;
+}
+
+
+
 input, textarea {
     font: 1em sans-serif;
     width : 50%;

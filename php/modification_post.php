@@ -24,23 +24,24 @@ if ( $result->num_rows > 0 ){
 
 
 
-    echo '<form action="./index.php?userID='.$userID.'" method="POST">
+    echo '<form action="./index.php?userID='.$userID.'" method="POST" class="centre">
         <div class="formbutton">Modification d\'un post passé</div>
         <div>
             <input type="hidden" name="action" value="edit">
             <input type="hidden" name="postID" value='.$data["ID_post"].'>
-            <label for="title">Titre :</label>
-            <input autofocus type="text" name="title" value='.$data["title"].'>
+            <label class="nomModif" for="title">Titre :</label>
+            <input class="ecrireModif" autofocus type="text" name="title" value='.$data["title"].'>
         </div>
         <div>
-            <label for="content">Message :</label>
-            <textarea name="content"> '.$data["content"].'</textarea>
+            <label class="nomModif" for="content">Message :</label>
+            <textarea class="ecrireModif" name="content"> '.$data["content"].'</textarea>
         </div>
         <div class="formbutton">
-            <button type="submit">Modifier le post</button>
+            <button type="submit" class="bouton2">Modifier le post</button>
         </div>
     </form>
-    <form action="./index.php?userID='.$userID.'" method="POST" >
+    <br>
+    <form action="./index.php?userID='.$userID.'" method="POST" class="centre">
         <div class="formbutton">Cliquez le bouton ci-dessous pour effacer le post</div>
         <div>
             <input type="hidden" name="action" id="action"  value="delete" >
@@ -49,7 +50,7 @@ if ( $result->num_rows > 0 ){
         <div class="formbutton">
             
            
-            <button  type="submit"  >Supprimer le post</button>
+            <button  type="submit"  class="bouton2">Supprimer le post</button>
         </div>
         
     </form>

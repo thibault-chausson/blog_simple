@@ -29,7 +29,11 @@ echo '<form action="./index.php?userID='.$userID.'" method="POST" >
     <div>
         <div class="centre"><button type="submit" class="bouton2">Ajouter ce post à mon blog</button></div>
     </div>
-</form>';
+</form>
+
+<br>'
+
+;
 
 
 }
