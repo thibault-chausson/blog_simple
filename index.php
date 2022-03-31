@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="styles/grid.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="ressources/menu/Notepad_Pencil_clip_art_hight.png">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -129,7 +137,9 @@ $loginStatus=CheckLogin();
             echo "<h3 class='centre'>Vous regarder le bog de $userAfficheNom.</h3>";
         }
         else{
-            echo "<h3 class='centre'>Cette utilisateur est inexistant donc :</h3>";
+            if(!isset($_POST["modifier"])){
+                echo "<h3 class='centre'>Cette utilisateur est inexistant donc :</h3>";
+            }
         }
 
         include "php/afficher_post.php";

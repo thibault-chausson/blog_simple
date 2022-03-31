@@ -1,5 +1,7 @@
 body{
     margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+
 }
 
 .centre{
@@ -19,3 +21,4 @@ a {
 a:hover{
     color: gold;
 }
+

@@ -23,15 +23,17 @@ if ( $result->num_rows > 0 ){
     $data = $result->fetch_assoc();
 
 ?>
+        <br>
 
 <form action="./index.php?userID=<?php echo $userID?>" method="POST" class="centre" >
-        <div class="formbutton">Modification d'un post passé</div>
+
         <div>
             <input type="hidden" name="action" value="edit">
             <input type="hidden" name="postID" value="<?php echo $data["ID_post"]?>">
             <label class="nomModif" for="title">Titre :</label>
             <input class="ecrireModif" autofocus type="text" name="title" value="<?php echo $data["title"]?>">
         </div>
+    <br>
         <div>
             <label class="nomModif" for="content">Message :</label>
             <textarea class="ecrireModif" name="content"> <?php echo $data["content"]?></textarea>

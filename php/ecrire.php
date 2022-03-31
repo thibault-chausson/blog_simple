@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="styles/boutons.css">
+<link rel="stylesheet" href="styles/ecrire.css">
 <link rel="stylesheet" href="styles/style.css">
 
 <?php
@@ -19,12 +19,13 @@ echo '<form action="./index.php?userID='.$userID.'" method="POST" >
     </br>
     <div>
         <input type="hidden" name="action" value="new">
-        <div class="nom"><label for="title">Titre :</label></div>
-        <div class="ecrire"> <input autofocus type="text" name="title"></div>
+        <div class="nom2" ><label for="title">Titre :</label></div>
+        <div class="ecrire2"> <input autofocus type="text" name="title"></div>
     </div>
+    <br>
     <div>
-        <div class="nom"><label for="content">Message :</label></div>
-        <div class="ecrire"><textarea name="content">Tapez votre texte ici...</textarea></div>
+        <div class="nom2" ><label for="content">Message :</label></div>
+        <div class="ecrire2" ><textarea name="content">Tapez votre texte ici...</textarea></div>
     </div>
     <div>
         <div class="centre"><button type="submit" class="bouton2">Ajouter ce post à mon blog</button></div>
