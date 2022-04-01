@@ -61,6 +61,11 @@
     background-color:#EEEEEE;
     padding:5px;
     border-radius: 15px;
+    background-color:white;
+    padding:9px;
+    font-size: 13px;
+    color: black;
+    border:none;
 }
 
 .modifbutton:hover{

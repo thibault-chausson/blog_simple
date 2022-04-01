@@ -1,7 +1,12 @@
 .bouton_co{
-    background-color:#EEEEEE;
+
     padding:5px;
     border-radius: 15px;
+    background-color:gray;
+    padding:9px;
+    font-size: 13px;
+    color: white;
+    border:none;
 }
 
 
@@ -18,7 +23,7 @@ label {
     width:200px;
     text-align: right;
     padding:5px 20px;
-    background-color:Midnightblue;
+    background-color:gray;
     border-radius:25px;
 }
 
