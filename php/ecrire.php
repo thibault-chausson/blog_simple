@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="styles/style.css">
 
 <?php
+
+//Formulaire pour écrire un post
+
 if ( isset($_POST["newPost"]) && $_POST["newPost"] == 1 ){
 
 

@@ -2,6 +2,8 @@
 
 <?php
 
+//Fonction pour afficher à l'écran les posts
+
 
 function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
 {
@@ -53,7 +55,7 @@ function DisplayPostsPage($blogIDAffiche,$userPropri) //, $ownerName, $isMyBlog)
             echo '
                 
                 <h3>' . $row["title"] . '</h3>
-                <p>dernière modification le ' . date("d/m/y à h:i:s", $timestamp) . '</p>
+                <p>dernière modification le ' . date("d/m/y à H:i:s", $timestamp) . '</p>
                 </div>
             
             ';

@@ -2,6 +2,8 @@
 
 <?php
 
+//Le menu
+
     ConnectDatabase();
     $loginStatus=CheckLogin();
     if (isset($username)) {

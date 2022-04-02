@@ -2,6 +2,9 @@
 
 <?php
 
+//Bouton pour aller sur le formulaire d'ajout de posts
+
+
 ConnectDatabase();
 $loginStatus=CheckLogin();
 $query30 = "SELECT `ID` FROM `connexion` WHERE logname = '" . $username . "' ";

@@ -1,4 +1,8 @@
 <?php
+
+
+//Le code qui permet d'ajouter un poste dans une base de données
+
 /*Pour avoir le userID*/
 $query10 = "SELECT `ID` FROM `connexion` WHERE logname = '".$username."' ";
 

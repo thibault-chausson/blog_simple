@@ -16,6 +16,7 @@ include("php/sql.php");
 ConnectDatabase();
 $loginStatus = CheckLogin();
 
+//Si on est connecté on va sur notre page de blog
 
 if (isset($username)) {
 
@@ -43,6 +44,9 @@ if (isset($username)) {
 
 <?php
 include 'php/menu.php';
+
+
+//On se connecte
 
 
 if ($loginStatus[1]) {

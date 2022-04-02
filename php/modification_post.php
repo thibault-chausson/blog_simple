@@ -1,6 +1,8 @@
 
 <?php
 
+//Le formulaire pour modifier un post
+
 if ( isset($_POST["modifier"]) ){
     ConnectDatabase();
     $loginStatus=CheckLogin();
@@ -43,7 +45,7 @@ if ( $result->num_rows > 0 ){
         </div>
     </form>
     <br>
-    <form action="./index.php?userID=<?php echo $userID?>" method="POST" class="centre" onsubmit="return confirm('Suppression ?');" >
+    <form action="./index.php?userID=<?php echo $userID?>" method="POST" class="centre" onsubmit="return confirm('Voulez-vous supprimer ce post ?');" >
         <div class="formbutton">Cliquez le bouton ci-dessous pour effacer le post</div>
         <div>
             <input type="hidden" name="action" id="action"  value="delete" >

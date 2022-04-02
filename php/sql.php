@@ -5,8 +5,8 @@
 function ConnectDatabase(){
     // Create connection
     $servername = "localhost";
-    $username = "root";
-    $password = "root";
+    $username = "UTBM";
+    $password = "WEB";
     $dbname = "blog_simple";
     global $conn;
 
@@ -47,6 +47,7 @@ function CheckNewAccountForm(){
         if ( strlen($_POST["name"]) < 4 ){
             $error = "Un nom utilisateur doit avoir une longueur d'au moins 4 lettres";
         }
+        //Un mot de passe n'est jamais vide
         elseif ( $_POST["password"] != $_POST["confirm"] || strlen($_POST["password"]) ==0  ){
             $error = "Le mot de passe et sa confirmation sont différents, ou votre mot de passe est vide";
         }

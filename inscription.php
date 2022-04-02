@@ -21,6 +21,7 @@ $newAccountStatus = CheckNewAccountForm();
 
 $loginStatus = CheckLogin();
 
+//Si on est connecté redirection vers notre page de blog
 
 if (isset($username) && strlen($_POST["name"]) > 3 && $_POST["password"] == $_POST["confirm"] && strlen($_POST["password"]) !=0  ) {
 
@@ -48,7 +49,7 @@ if (isset($username) && strlen($_POST["name"]) > 3 && $_POST["password"] == $_PO
 include 'php/menu.php';
 
 
-
+//Sinon on s'inscrit
 
 if($newAccountStatus[1]){
     echo '<h3 class="centre">Nouveau compte crée avec succès !</h3>';

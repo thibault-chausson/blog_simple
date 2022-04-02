@@ -1,5 +1,5 @@
 
-
+<!--Le formulaire d'inscription avec la possibilité d'afficher le mot de passe en clair-->
 
 <form action="./inscription.php" method="post" class="centre">
 

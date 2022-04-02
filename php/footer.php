@@ -2,6 +2,10 @@
 
 <?php
 
+
+// Le pied de page
+
+
 echo '<footer>
     <!-- Placez ici le contenu du pied de page -->
 

@@ -1,5 +1,5 @@
 
-
+<!--Le formulaire de connexion avec la possibilité d'afficher le mot de passe en clair-->
 
 <form action="./connexion.php" method="post">
 

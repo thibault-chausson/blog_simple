@@ -82,10 +82,10 @@ $loginStatus=CheckLogin();
     <div class="recherche">
 
         <?php
-        //if (isset($username) ) {
+
         include "recherche.php";
         echo $message_recherche;
-        //}
+
         ?>
     </div>
 
